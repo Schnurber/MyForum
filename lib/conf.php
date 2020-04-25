@@ -1,4 +1,9 @@
 <?php
+
+/** 
+ * Global confogurations: Database connection, root password, salt 
+ */
+
 namespace MyForum\lib;
 
 function conf(){

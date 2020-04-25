@@ -1,9 +1,12 @@
 <?php
 namespace MyForum\lib;
 
+/**
+ * Base class for all Pages
+ */
 abstract class HomePage extends TemplateRenderer {
 
-	protected string $name;
+	protected $name;
 
 	//Ueberschreiben
 	abstract protected function body();

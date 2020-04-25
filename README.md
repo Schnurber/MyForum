@@ -1,23 +1,25 @@
 # Myforum
 
-Dies ist ein Beispiel-Code für angehende Web-Spezialisten.
+This is an example code for prospective web specialists.
 
-Er soll folgendes verdeutlichen:
+It should clarify the following:
 
-* Aufbau von PHP Projekten und Frameworks
+* Building PHP projects and frameworks
 
 * MVC
 
-* Mit Template-System
+* With template system
 
-* OOP MIT [PHP 7](http://http://php.net/ "PHP-Homepage")
+* OOP WITH [PHP 7](http://http://php.net/ "PHP Homepage")
 
 * Sessions
 
-* Datenbank-Abfrage
+* Database query
 
-* Darstellung von Listen
+* Display of lists
 
 * CRUD
 
-Arbeitet mit  [Bootstrap V.2](http://getbootstrap.com/2.3.2/ "Bootstrap V.2 Homepage")
+* URL rewriting
+
+Works with [Bootstrap V.4](https://getbootstrap.com/ "Bootstrap V.4 Homepage")

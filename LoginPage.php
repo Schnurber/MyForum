@@ -1,11 +1,13 @@
 <?php
 namespace MyForum;
-
+/**
+ * Login page to enter the administrator name and password
+ */
 final class LoginPage extends lib\HomePage {
     use lib\DataBase;
 
 	/*
-	 * Beim Neuladen auswerten
+	 * Evaluate when reloading
 	 */
 	protected function init(){
 		session_start();
@@ -27,11 +29,11 @@ final class LoginPage extends lib\HomePage {
 	 * Redirect
 	 */
 	 protected function redir(){
-	 	header("Location: index.php?p=admin") ;
+	 	header("Location: admin.html") ;
 	 }
 
 	/*
-	 * Ausgabe
+	 * Output
 	 */
 	protected function body(){
 		return $this->render('login.php', 'login');

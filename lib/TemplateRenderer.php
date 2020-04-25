@@ -1,10 +1,14 @@
 <?php
 namespace MyForum\lib;
 
+/**
+ * Capabilities for rendering templates
+ */
 abstract class TemplateRenderer {
+	use Icons;
 
-	protected string $section;
-	protected string $result;
+	protected $section;
+	protected $result;
 
 	protected function render(string $path, string $section, array $vars=null) {
 	

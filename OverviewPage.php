@@ -1,12 +1,15 @@
 <?php 
 namespace MyForum;
 
+/**
+ * Overview of all threads
+ */
 
 final class OverviewPage extends lib\HomePage {
 	use lib\DataBase;
 	
 	protected function init(){
-		//NIX
+		//do nothing
 	}
 	
 	protected function body(){

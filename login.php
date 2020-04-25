@@ -1,9 +1,9 @@
 <?php $begin('login') ?>
 <div class="subnav">
-<a class="btn btn-primary" href="index.php">&Uuml;bersicht</a>
+<a class="btn btn-primary" href="index.html">Overview</a>
 </div>
 <h2>Login</h2>
-<form class="well" action="index.php?p=login" method="post">
+<form class="well" action="login.html" method="post">
 	<label>Benutzername:</label>
 	<input name="user" type="text" size="20" maxlength="40"/>
 	<label>Passwort:</label>

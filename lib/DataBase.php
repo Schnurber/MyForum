@@ -1,9 +1,9 @@
 <?php
 namespace MyForum\lib;
 require_once('conf.php');
-/*
- * Aspekt fuer 
- *	Datenbank-Kommunikation
+/** 
+ *  Capabilities for 
+ *	database communication
  */
 trait DataBase{
 	private static $connection=null;
@@ -21,7 +21,6 @@ trait DataBase{
 			$stmt = self::$connection->prepare($sql);
 			$stmt->execute($vars);
 			$arr = $stmt->fetchAll();
-			//$arr=self::$connection->query($sql)->fetchAll();
 		} catch (\PDOException $e) {
 			error_log( 'Database Error: ' . $e->getMessage());
 		}
@@ -29,7 +28,4 @@ trait DataBase{
 	}
 	
 }
-//TODO:
-//Autoloading
-//SESSIONS
 ?>

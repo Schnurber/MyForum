@@ -1,11 +1,13 @@
 <?php 
-namespace MyForum;//Test hallo neue Version 2
-
+namespace MyForum;
+/**
+ * Page to manage the threads
+ */
 final class AdminPage extends lib\HomePage {
 	use lib\DataBase;
 
 	/*
-	 * Beim Neuladen auswerten
+	 * Evaluate when reloading
 	 */
 	protected function init(){
 		session_start();
@@ -22,14 +24,14 @@ final class AdminPage extends lib\HomePage {
 		foreach ($toDelete as $id) {
 			self::query("delete from tbl_threads where ID = :id", array(':id' => $id));
 			//self::query("delete from tbl_beitraege where thread_ID = :id", array(':id' => $id));
-			/* Uebberfluessig weil: 
+			/* Not necessary because of: 
 			ALTER TABLE `tbl_beitraege`
   				ADD CONSTRAINT `tbl_beitraege_ibfk_1` FOREIGN KEY (`thread_ID`) REFERENCES `tbl_threads` (`id`) 
   						ON DELETE CASCADE ON UPDATE CASCADE;
   			*/
 		}
 		
-		if (isset($_POST["newthread"])) { //Neuer Eintrag
+		if (isset($_POST["newthread"])) { // New entry
 			$val=trim($_POST["newthread"]);
 			if ($val!="") {
 				self::query("insert into tbl_threads values (NULL, :val)", array(':val' => $val));
@@ -44,7 +46,6 @@ final class AdminPage extends lib\HomePage {
 		$ret='';
 		if (!isset($_SESSION['loggedin'])) {
 			die ($this->render('admin.php', 'admin_die'));
-			//die ("<div id='meldung'>Bitte anmelden!</div>");
 		}
 		$ret .= $this->render('admin.php', 'admin_subnav');
 		
