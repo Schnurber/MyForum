@@ -22,4 +22,6 @@ It should clarify the following:
 
 * URL rewriting
 
+See video tutorial (in German): [Youtube Tutorial](https://youtu.be/CrqW7R0viH8 "Youtube Tutorial")
+
 Works with [Bootstrap V.4](https://getbootstrap.com/ "Bootstrap V.4 Homepage")
