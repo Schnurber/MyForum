@@ -2,6 +2,6 @@
 
 RewriteEngine On
 
-RewriteRule ^([^/]*)/([^/]*)\.html$ /index.php?p=$1&thread=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)\.html$ index.php?p=$1&thread=$2 [L]
 
-RewriteRule ^([^/]*)\.html$ /index.php?p=$1 [L]
+RewriteRule ^([^/]*)\.html$ index.php?p=$1 [L]
