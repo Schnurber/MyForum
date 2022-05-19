@@ -6,8 +6,12 @@ require_once('conf.php');
  *	database communication
  */
 trait DataBase{
-	private static $connection=null;
+	private static $connection = null;
 	
+	private static function prefix() {
+		return conf()['prefix'];
+	}
+
 	private static function connect(){
 		$conf=conf();
 		$conn=$conf['driver'].':host='.$conf['host'].';dbname='.$conf['database'];

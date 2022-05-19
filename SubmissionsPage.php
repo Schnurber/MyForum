@@ -10,7 +10,7 @@ final class SubmissionsPage extends lib\HomePage {
 	 * Evaluate when reloading
 	 */
 	protected function init(){
-
+		$pre = self::prefix();
 		if (isset($_POST["new"])){//New Entry
 			$val=trim($_POST["new"]) ;
 			if ($val!=""){
@@ -21,7 +21,7 @@ final class SubmissionsPage extends lib\HomePage {
 				}else {
 					$_SESSION['posted'.$_GET['thread']]=true;
 					$thrd=$_GET['thread'];
-					self::query("insert into tbl_beitraege values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
+					self::query("insert into {$pre}beitraege values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
 				}
 			}
 		}
@@ -30,17 +30,18 @@ final class SubmissionsPage extends lib\HomePage {
 	 * Output
 	 */
 	protected function body(){
+		$pre = self::prefix();
 		$thrd=$_GET['thread'];
-		$thr = self::query("select name from tbl_threads where ID=:thrd", array(':thrd'=>$thrd));
+		$thr = self::query("select name from {$pre}threads where ID=:thrd", array(':thrd'=>$thrd));
 		$ret="";
 		$ret .= $this->render('submissions.php', 'sub_subnav', array('name' => $thr[0]['name']));
 		$thrd=$_GET['thread'];
-		$rows=self::query("select * from tbl_beitraege where thread_ID=:thrd", array(':thrd'=>$thrd));
+		$rows=self::query("select * from {$pre}beitraege where thread_ID=:thrd", array(':thrd'=>$thrd));
 		$ret .= $this->render('submissions.php', 'sub_table_head');
 		foreach ($rows as $row) {
 			$ret .= $this->render('submissions.php', 'sub_table_row', array('row' => $row));
 		}
-		$uri = "/submissons/$_GET[thread].html";
+		$uri = "../submissons/$_GET[thread].html";
 		$ret .= $this->render('submissions.php', 'sub_table_end', array('uri' => $uri));
 		return $ret;
 	}

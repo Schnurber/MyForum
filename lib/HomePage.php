@@ -8,7 +8,7 @@ abstract class HomePage extends TemplateRenderer {
 
 	protected $name;
 
-	//Ueberschreiben
+	//override!
 	abstract protected function body();
 	abstract protected function init();
 

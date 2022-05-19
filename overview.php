@@ -10,7 +10,7 @@
 <tr>
 	<td>
 		<?= self::icon('thread') ?>
-		<a href='submissons/<?= $row[0] ?>.html'><?= $row[1] ?></a>
+		<a href= 'submissons/<?= $row[0] ?>.html'><?= $row[1] ?></a>
 	</td>
 </tr>
 <?php $end('table_row') ?>

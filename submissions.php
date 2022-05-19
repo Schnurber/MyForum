@@ -6,7 +6,7 @@
 <!----------------------------------------------->
 <?php $begin('sub_subnav') ?>
 <div class='subnav'>
-<a class='btn btn-primary' href='/index.html'>Overview</a>
+<a class='btn btn-primary' href='../index.html'>Overview</a>
 </div>
 <h2><?= $name ?></h2>
 <?php $end('sub_subnav') ?>

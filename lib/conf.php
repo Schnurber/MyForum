@@ -1,7 +1,7 @@
 <?php
 
 /** 
- * Global confogurations: Database connection, root password, salt 
+ * Global configurations: Database connection, root password, salt 
  */
 
 namespace MyForum\lib;
@@ -14,6 +14,7 @@ function conf(){
 	'pass'		=> 	'root',
 	'database'	=> 	'myforum',
 	'engine'	=>	'InnoDB',
+	'prefix'	=>	'tbl_',
 	];
 }
 function admins(){
