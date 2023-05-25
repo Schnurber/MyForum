@@ -1,6 +1,6 @@
 <?php
 namespace MyForum\lib;
-
+require_once('conf.php');
 /**
  * Base class for all Pages
  */
@@ -11,6 +11,11 @@ abstract class HomePage extends TemplateRenderer {
 	//override!
 	abstract protected function body();
 	abstract protected function init();
+	
+	protected static function host() {
+		return conf()['protocol'] . '://' . conf()['host'];
+	}
+	
 
 	function __construct(string $name) {
 		$this->name=$name;
