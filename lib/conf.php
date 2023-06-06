@@ -9,13 +9,14 @@ namespace MyForum\lib;
 function conf(){
 	return [
 	'driver'	=>	'mysql',
-	'protocol'   =>  'http',
-	'host'		=> 	'localhost',
+	'protocol'  =>  'http',
+	'host'		=> 	'localhost:8888',
+	'dbhost'	=> 	'localhost',
 	'user'		=> 	'root',
 	'pass'		=> 	'root',
 	'database'	=> 	'myforum',
 	'engine'	=>	'InnoDB',
-	'prefix'	=>	'webeng2022_test_',
+	'prefix'	=>	'tbl_',
 	];
 }
 function admins(){

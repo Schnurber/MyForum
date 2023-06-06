@@ -14,7 +14,7 @@ trait DataBase{
 
 	private static function connect(){
 		$conf=conf();
-		$conn=$conf['driver'].':host='.$conf['host'].';dbname='.$conf['database'];
+		$conn=$conf['driver'].':host='.$conf['dbhost'].';dbname='.$conf['database'];
 		self::$connection = self::$connection ?: new \PDO($conn, $conf['user'], $conf['pass']);
 	}
 	
