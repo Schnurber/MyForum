@@ -1,6 +1,6 @@
 <?php $begin('table_head') ?>
 <div class='subnav'>
-	<a class='btn btn-primary' href='login.html'>login</a>
+	<a class='btn btn-primary' href='login.html'><?= $person ?></a>
 </div>
 <h2>Here is a list of all topics:</h2>
 <table class='table table-striped table-bordered'>

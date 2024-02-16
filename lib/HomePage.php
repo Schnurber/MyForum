@@ -22,7 +22,12 @@ abstract class HomePage extends TemplateRenderer {
 	}
 
 	protected function head(){
-		return $this->render('home.php', 'header', array('title' => $this->name));
+		if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+		return $this->render('home.php', 'header', array(
+			'title' => $this->name, 
+			'host' => $this->host(),
+			'person' => isset($_SESSION['loggedin']) ? "Admin" : "Login")
+		);
 	}
 
 	protected function tail(){

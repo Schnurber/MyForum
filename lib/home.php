@@ -5,22 +5,33 @@
 	<head>
 	<title><?= $title ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	
 	<link rel="stylesheet" type="text/css" href="/style/style.css" />
 </head>
 <body>
+<nav class="navbar bg-body-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<?= $host ?>">
+	<?= self::icon('pen') ?>
+      MyForum
+    </a>
+	<a class="nav-link" href="login.html"><?= $person ?></a>
+  </div>
+  
+</nav>
 	<div class="container">
-		<header  id="overview" class="jumbotron">
+		<header id="overview">
 			<h1 class="display-4">My awsome Forum</h1>
 			<p class="lead">Write anything you want!</p>
 		</header>
-		<section>
+	<section>
 <?php $end('header') ?>
 <!----------------------------------------------->
 <?php $begin('footer') ?>
 		</section>
-		<footer>
+		
+		<footer class="py-3 my-4 border-top">
 			<p>&copy; <?=date("Y")?> by Dieter Meiller</p>
 		</footer>
 	</div>

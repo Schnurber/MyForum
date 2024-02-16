@@ -10,7 +10,7 @@ It should clarify the following:
 
 * With template system
 
-* OOP WITH [PHP 7](http://http://php.net/ "PHP Homepage")
+* OOP WITH [PHP 8](http://http://php.net/ "PHP Homepage")
 
 * Sessions
 
@@ -24,4 +24,4 @@ It should clarify the following:
 
 See video tutorial (in German): [Youtube Tutorial](https://youtu.be/CrqW7R0viH8 "Youtube Tutorial")
 
-Works with [Bootstrap V.4](https://getbootstrap.com/ "Bootstrap V.4 Homepage")
+Works with [Bootstrap V.4](https://getbootstrap.com/ "Bootstrap V.5 Homepage")

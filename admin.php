@@ -6,7 +6,7 @@
 <div class='subnav'>
 	<a class='btn btn-primary' href='index.html'>Overview</a>
 </div>
-<h2>Themen-Verwaltung</h2>
+<h2>Topic management</h2>
 <?php $end('admin_subnav') ?>
 <!----------------------------------------------->
 <?php $begin('table_head') ?>
@@ -26,8 +26,8 @@
 <div class="form-group">
 <label for="newthread">New thread</label>
 <input name="newthread" id="newthread" class="form-control" type="text" size="40" maxlength="90">
+<input class="btn btn-success mt-3" type="submit" value=" Submit " />
+<input class="btn btn-warning mt-3" type="reset" value=" Cancel" />
 </div>
-<input class="btn btn-success" type="submit" value=" Submit " />
-<input class="btn btn-warning" type="reset" value=" Cancel" />
 </form>
 <?php $end('table_end') ?>
