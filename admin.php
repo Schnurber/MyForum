@@ -16,7 +16,7 @@
 <!----------------------------------------------->
 <?php $begin('table_row') ?>
 	<tr>
-		<td><?= self::icon('thread') ?>&nbsp;<?= $title ?></td><td align='right'>Delete</td>
+		<td><?= self::icon('thread') ?>&nbsp;<?= $title ?></td><td style="text-align: right">Delete</td>
 		<td><input type='checkbox' name='<?= $name ?>' value='<?= $id ?>'></td>
 	</tr>
 <?php $end('table_row') ?>

@@ -15,13 +15,12 @@ final class SubmissionsPage extends lib\HomePage {
 			$val=trim(htmlspecialchars($_POST["new"])) ;
 			if ($val!=""){
 				session_start();
-				//Entweder nur 1x
+				$thrd=$_GET['thread'];
+				self::query("insert into {$pre}beitraege values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
 				if (isset($_SESSION['posted'.$_GET['thread']])){
 					return $this->render('submissions.php', 'sub_sent');
-				}else {
+				} else {
 					$_SESSION['posted'.$_GET['thread']]=true;
-					$thrd=$_GET['thread'];
-					self::query("insert into {$pre}beitraege values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
 				}
 			}
 		}
