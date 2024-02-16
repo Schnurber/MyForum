@@ -16,7 +16,7 @@
 	<?= self::icon('pen') ?>
       MyForum
     </a>
-	<a class="nav-link" href="login.html"><?= $person ?></a>
+	<a class="nav-link" href="<?= $host ?>/login.html"><?= $person ?></a>
   </div>
 </nav>
 	<div class="container">
