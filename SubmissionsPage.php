@@ -12,7 +12,7 @@ final class SubmissionsPage extends lib\HomePage {
 	protected function init(){
 		$pre = self::prefix();
 		if (isset($_POST["new"])){//New Entry
-			$val=trim($_POST["new"]) ;
+			$val=trim(htmlspecialchars($_POST["new"])) ;
 			if ($val!=""){
 				session_start();
 				//Entweder nur 1x

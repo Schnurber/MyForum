@@ -33,7 +33,7 @@ final class AdminPage extends lib\HomePage {
 		}
 		
 		if (isset($_POST["newthread"])) { // New entry
-			$val=trim($_POST["newthread"]);
+			$val=trim(htmlspecialchars($_POST["newthread"]));
 			if ($val!="") {
 				self::query("insert into {$pre}threads values (NULL, :val)", array(':val' => $val));
 			}
