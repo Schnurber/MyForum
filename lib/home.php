@@ -1,7 +1,7 @@
 <!---------------Main Template------------------>
 <?php $begin('header') ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-bs-theme="dark">
 	<head>
 	<title><?= $title ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/style/style.css" />
 </head>
 <body>
-<nav class="navbar bg-body-secondary">
+<nav class="navbar bg-body-secondary sticky-top shadow">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?= $host ?>">
 	<?= self::icon('pen') ?>
@@ -18,19 +18,17 @@
     </a>
 	<a class="nav-link" href="login.html"><?= $person ?></a>
   </div>
-  
 </nav>
 	<div class="container">
 		<header id="overview">
 			<h1 class="display-4">My awsome Forum</h1>
 			<p class="lead">Write anything you want!</p>
 		</header>
-	<section>
+	<section class="bd-masthead mb-3">
 <?php $end('header') ?>
 <!----------------------------------------------->
 <?php $begin('footer') ?>
 		</section>
-		
 		<footer class="py-3 my-4 border-top">
 			<p>&copy; <?=date("Y")?> by Dieter Meiller</p>
 		</footer>
