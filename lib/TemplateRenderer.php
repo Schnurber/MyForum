@@ -30,7 +30,7 @@ abstract class TemplateRenderer {
 		return $this->result;
 	}
 
-	protected function begin($section){
+	protected function begin(string $section){
 		if ($section == $this->section) {
 			ob_clean();
 			error_reporting(E_ALL);
@@ -39,7 +39,7 @@ abstract class TemplateRenderer {
 		}
 	}
 
-	protected function end($section){
+	protected function end(string $section){
 		if ($section == $this->section) {
 			$this->result = ob_get_contents();
 		}
