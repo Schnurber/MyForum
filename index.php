@@ -1,6 +1,6 @@
 <?php 
 namespace MyForum;
-
+require_once('lib/lang.php');
 /**
  * Autoload php files
  */
@@ -18,13 +18,13 @@ $fileName = dirname(__DIR__) .'/'.str_replace("\\", "/", $className).".php";
  */
 if (isset($_GET['p'])){
 switch ($_GET['p']) {
-	case 'submissons':	$p=new SubmissionsPage('Posts');	break;
-	case 'admin':	$p=new AdminPage('Administrator');	break;
-	case 'login':	$p=new LoginPage('Login');	break;
-	default:	$p=new OverviewPage('Overview');
+	case 'submissons':	$p=new SubmissionsPage('POSTS');	break;
+	case 'admin':	$p=new AdminPage('ADMIN');	break;
+	case 'login':	$p=new LoginPage('LOGIN');	break;
+	default:	$p=new OverviewPage('OVERVIEW');
 }	
 }else {
-	$p=new OverviewPage('Overview');
+	$p=new OverviewPage('OVERVIEW');
 }
 $p->display();
 ?>

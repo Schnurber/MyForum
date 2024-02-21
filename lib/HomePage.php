@@ -1,6 +1,7 @@
 <?php
 namespace MyForum\lib;
 require_once('conf.php');
+require_once('lang.php');
 /**
  * Base class for all Pages
  */
@@ -24,9 +25,9 @@ abstract class HomePage extends TemplateRenderer {
 	protected function head(){
 		if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 		return $this->render('home.php', 'header', array(
-			'title' => $this->name, 
+			'TITLE' => $this->name, 
 			'host' => $this->host(),
-			'person' => isset($_SESSION['loggedin']) ? "Admin" : "Login")
+			'person' => isset($_SESSION['loggedin']) ? t('ADMIN') : t('LOGIN'))
 		);
 	}
 
@@ -35,6 +36,7 @@ abstract class HomePage extends TemplateRenderer {
 	}
 
 	public function display(){
+		
 		$msg = $this->init();
 		echo $this->head();
 		echo $msg;

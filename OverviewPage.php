@@ -15,7 +15,7 @@ final class OverviewPage extends lib\HomePage {
 	protected function body(){
 		$result = '';
 		$result .= $this->render('overview.php', 'table_head', array(
-			'person' => isset($_SESSION['loggedin']) ? "Admin" : "Login"
+			'person' => isset($_SESSION['loggedin']) ? t('ADMIN') : t('LOGIN')
 		));
 		$pre = self::prefix();
 		$query=self::query("select * from {$pre}threads");

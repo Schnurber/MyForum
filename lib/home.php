@@ -1,9 +1,9 @@
 <!---------------Main Template------------------>
 <?php $begin('header') ?>
 <!DOCTYPE html>
-<html lang="de" data-bs-theme="dark">
+<html data-bs-theme="dark">
 	<head>
-	<title><?= $title ?></title>
+	<title><?= t($TITLE) ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	
@@ -21,8 +21,8 @@
 </nav>
 	<div class="container">
 		<header id="overview">
-			<h1 class="display-4">My awsome Forum</h1>
-			<p class="lead">Write anything you want!</p>
+			<h1 class="display-4"><?= t('HEADER') ?></h1>
+			<p class="lead"><?= t('SUBHEADER') ?></p>
 		</header>
 	<section class="bd-masthead mb-3">
 <?php $end('header') ?>

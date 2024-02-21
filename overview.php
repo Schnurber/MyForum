@@ -2,7 +2,7 @@
 <div class='subnav'>
 	<a class='btn btn-primary' href='login.html'><?= $person ?></a>
 </div>
-<h2>Here is a list of all topics:</h2>
+<h2><?= t('LISTOFALLTOPICS') ?></h2>
 <table class='table table-striped table-bordered'>
 <?php $end('table_head') ?>
 <!----------------------------------------------->
