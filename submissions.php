@@ -1,8 +1,8 @@
-<?php $begin('sub_sent') ?>
-<div class="alert alert-danger">
-	<strong>Warning!</strong> There has already been sent a post!
+<?php $begin('sub_first') ?>
+<div class="alert alert-primary">
+	<strong>Start posting!</strong> Share your first message in this category!
 </div>
-<?php $end('sub_sent') ?>
+<?php $end('sub_first') ?>
 <!----------------------------------------------->
 <?php $begin('sub_subnav') ?>
 <div class='subnav'>

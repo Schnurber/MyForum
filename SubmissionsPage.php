@@ -10,19 +10,20 @@ final class SubmissionsPage extends lib\HomePage {
 	 * Evaluate when reloading
 	 */
 	protected function init(){
+		session_start();
 		$pre = self::prefix();
+		$thrd=$_GET['thread'];
 		if (isset($_POST["new"])){//New Entry
 			$val=trim(htmlspecialchars($_POST["new"])) ;
 			if ($val!=""){
-				session_start();
-				$thrd=$_GET['thread'];
 				self::query("insert into {$pre}beitraege values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
-				if (isset($_SESSION['posted'.$_GET['thread']])){
-					return $this->render('submissions.php', 'sub_sent');
-				} else {
-					$_SESSION['posted'.$_GET['thread']]=true;
+				if (!isset($_SESSION['posted'.$thrd])){
+					$_SESSION['posted'.$thrd]=true;
 				}
 			}
+		}
+		if (!isset($_SESSION['posted'.$thrd])){
+			return $this->render('submissions.php', 'sub_first');
 		}
 	}
 	/*
