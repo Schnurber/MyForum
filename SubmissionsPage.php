@@ -1,7 +1,7 @@
 <?php 
 namespace MyForum;
 /**
- * Page that lists all contributions. Further you can send a new post if you have not sent one yet. 
+ * Page that lists all contributions. 
  */
 
 final class SubmissionsPage extends lib\HomePage {
