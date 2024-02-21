@@ -24,11 +24,11 @@ final class AdminPage extends lib\HomePage {
 		//Alle raus
 		foreach ($toDelete as $id) {
 			self::query("delete from {$pre}threads where ID = :id", array(':id' => $id));
-			// self::query("delete from tbl_beitraege where thread_ID = :id", array(':id' => $id));
+			// self::query("delete from tbl_posts where thread_ID = :id", array(':id' => $id));
 			// Not necessary because of: 
 			/*
-			ALTER TABLE `tbl_beitraege`
-  				ADD CONSTRAINT `tbl_beitraege_ibfk_1` FOREIGN KEY (`thread_ID`) REFERENCES `tbl_threads` (`id`) 
+			ALTER TABLE `tbl_posts`
+  				ADD CONSTRAINT `tbl_posts_ibfk_1` FOREIGN KEY (`thread_ID`) REFERENCES `tbl_threads` (`id`) 
   						ON DELETE CASCADE ON UPDATE CASCADE;
   			*/
 		}
