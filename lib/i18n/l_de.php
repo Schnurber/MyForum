@@ -15,6 +15,7 @@ $_l = [
 'ADMIN' => 'Administrator',
 'USERNAME' => 'Benutzername',
 'PASSWORD' => 'Passwort',
-'PLEASELOGIN' => 'Bitte melde dich an!'
+'PLEASELOGIN' => 'Bitte melde dich an!',
+'NOTFOUND' => '404 Seite nicht gefunden'
 ];
 ?>
