@@ -28,6 +28,6 @@
 	<label for="newentry"><?= self::icon('share') ?>&nbsp;Neuer Beitrag</label>
 	<input name='new' type='text' class="form-control mt-1" id="newentry" style='width:100%' maxlength='120'>
 </div>
-<button type='submit' class='btn btn-success mt-3' value='Send'><? t('SEND') ?></button>
+<button type='submit' class='btn btn-success mt-3' value='Send'><?= t('SUBMIT') ?></button>
 </form>
 <?php $end('sub_table_end') ?>
