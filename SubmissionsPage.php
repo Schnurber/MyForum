@@ -16,7 +16,7 @@ final class SubmissionsPage extends lib\HomePage {
 		if (isset($_POST["new"])){//New Entry
 			$val=trim(htmlspecialchars($_POST["new"])) ;
 			if ($val!=""){
-				self::query("insert into {$pre}beitraege values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
+				self::query("insert into {$pre}posts values (NULL,:thrd,:val)", array(':thrd'=>$thrd, ':val'=>$val));
 				if (!isset($_SESSION['posted'.$thrd])){
 					$_SESSION['posted'.$thrd]=true;
 				}
@@ -36,7 +36,7 @@ final class SubmissionsPage extends lib\HomePage {
 		$ret="";
 		$ret .= $this->render('submissions.php', 'sub_subnav', array('name' => $thr[0]['name']));
 		$thrd=$_GET['thread'];
-		$rows=self::query("select * from {$pre}beitraege where thread_ID=:thrd", array(':thrd'=>$thrd));
+		$rows=self::query("select * from {$pre}posts where thread_ID=:thrd", array(':thrd'=>$thrd));
 		$ret .= $this->render('submissions.php', 'sub_table_head');
 		foreach ($rows as $row) {
 			$ret .= $this->render('submissions.php', 'sub_table_row', array('row' => $row));

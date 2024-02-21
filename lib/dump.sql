@@ -9,10 +9,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_beitraege`
+-- Table structure for table `tbl_posts`
 --
 
-CREATE TABLE `tbl_beitraege` (
+CREATE TABLE `tbl_posts` (
   `id` int(11) NOT NULL,
   `thread_ID` int(11) NOT NULL,
   `text` text NOT NULL
@@ -34,9 +34,9 @@ CREATE TABLE `tbl_threads` (
 --
 
 --
--- Indexes for table `tbl_beitraege`
+-- Indexes for table `tbl_posts`
 --
-ALTER TABLE `tbl_beitraege`
+ALTER TABLE `tbl_posts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `thread_ID` (`thread_ID`);
 
@@ -51,9 +51,9 @@ ALTER TABLE `tbl_threads`
 --
 
 --
--- AUTO_INCREMENT for table `tbl_beitraege`
+-- AUTO_INCREMENT for table `tbl_posts`
 --
-ALTER TABLE `tbl_beitraege`
+ALTER TABLE `tbl_posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_threads`
@@ -65,7 +65,7 @@ ALTER TABLE `tbl_threads`
 --
 
 --
--- Constraints of table `tbl_beitraege`
+-- Constraints of table `tbl_posts`
 --
-ALTER TABLE `tbl_beitraege`
-  ADD CONSTRAINT `tbl_beitraege_ibfk_1` FOREIGN KEY (`thread_ID`) REFERENCES `tbl_threads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `tbl_posts`
+  ADD CONSTRAINT `tbl_posts_ibfk_1` FOREIGN KEY (`thread_ID`) REFERENCES `tbl_threads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
